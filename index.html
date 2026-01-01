@@ -4,26 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
-          }
-        }
-      </script>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <div>
-        <canvas id="c">
-
-        </canvas>
+    <div name="navigation" class="nav-parent">
+        <div class="nav-left">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo">
+        </div>
+        <div class="nav-right" role="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="cv.html">Playground</a>
+        </div>
     </div>
-    <section>
-        <h1>JOHN ADENU-MENSAH</h1>
-        <button>Hello!</button>
-        <p><a href="#">Contact Me</a></p>
+    <section id="landing" name="landing" class="page-section">
+        <h1>Hey there, I'm John!</h1>
+        <p>Cybersecurity, Game Dev, Web Dev Enthusiast</p>
+        <p>
+            <a href="https://www.linkedin.com/in/john-adenu-mensah/">LinkedIn</a> &middot;
+            <a href="https://www.instagram.com/racially_ambiguous_potato/">Instagram</a> &middot;
+            <a href="https://github.com/Men5ah">Github</a>
+        </p>
+    </section>
+
+    <section id="about" name="about" class="page-section">
+        <div class="about-left">
+            <img src="assets/images/profile.jpg" alt="Profile photo">
+        </div>
+        <div class="about-right">
+            <div class="about-right-top">
+                <h2>About Me</h2>
+                <p>
+                    I'm John. A developer based in Ghana, West Africa with interests in Cybersecurity, Game Development, and Web Development. With a BSc. in Computer Science, I have a solid foundation in programming and computational thinking with Python and Java mainly. I am always interested in learning new technologies and improving my skills.
+                </p>
+                <p>
+                    Feel free to check out my blog where I write about my explorations in my other interests outside my Big Three. You can visit the playground to see some of my projects and experiments.
+                </p>
+                <p>
+                    If you like what you see, let's connect! You can reach me via the contact form below or through any of my social media links.
+                </p>
+            </div>
+            <div class="about-right-bottom">
+                <form class="contact-form" action="#" method="post">
+                    <label><input type="text" name="name" placeholder="Your name" required></label>
+                    <label><input type="email" name="email" placeholder="Your email" required></label>
+                    <label><textarea name="message" placeholder="Your message" rows="4" required></textarea></label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
     </section>
 </body>
 </html>
