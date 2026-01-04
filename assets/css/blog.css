@@ -1,11 +1,15 @@
 /* Blog Page Styles */
 
 .blog-hero {
+    display: block;
     background: #f6f7fb;
     color: #2c3e50;
     text-align: center;
     padding: 70px 24px 50px;
     border-bottom: 1px solid #e5e7eb;
+    height: auto;
+    align-items: initial;
+    justify-content: initial;
 }
 
 .blog-hero h1 {
@@ -21,9 +25,13 @@
 }
 
 .blog-content {
+    display: block;
     max-width: 1100px;
     margin: 50px auto 80px;
     padding: 0 24px;
+    height: auto;
+    align-items: initial;
+    justify-content: initial;
 }
 
 .blog-grid {
