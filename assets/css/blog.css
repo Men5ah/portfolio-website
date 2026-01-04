@@ -1,0 +1,114 @@
+/* Blog Page Styles */
+
+.blog-hero {
+    background: #f6f7fb;
+    color: #2c3e50;
+    text-align: center;
+    padding: 70px 24px 50px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.blog-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.blog-hero p {
+    font-size: 18px;
+    margin: 0;
+    color: #4b5563;
+}
+
+.blog-content {
+    max-width: 1100px;
+    margin: 50px auto 80px;
+    padding: 0 24px;
+}
+
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: #1f2937;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: calc((100% - 60px) / 4); /* 4 per row with 20px gaps */
+}
+
+.blog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-empty {
+    margin-top: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.blog-date {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.blog-card h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    color: #111827;
+    line-height: 1.4;
+}
+
+.blog-card p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0 0 14px 0;
+}
+
+.read-more {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.blog-card:hover .read-more {
+    color: #1d4ed8;
+}
+
+@media (max-width: 1024px) {
+    .blog-card {
+        width: calc((100% - 20px) / 2); /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-hero {
+        padding: 60px 16px 40px;
+    }
+    .blog-hero h1 {
+        font-size: 36px;
+    }
+    .blog-content {
+        padding: 0 16px;
+        margin: 40px auto 60px;
+    }
+    .blog-card {
+        width: 100%;
+    }
+}

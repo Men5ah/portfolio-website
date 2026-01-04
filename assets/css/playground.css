@@ -1,0 +1,129 @@
+/* Playground Page Styles */
+
+.playground-hero {
+    display: block;
+    background: #f6f7fb;
+    color: #2c3e50;
+    text-align: center;
+    padding: 70px 24px 50px;
+    border-bottom: 1px solid #e5e7eb;
+    height: auto;
+    align-items: initial;
+    justify-content: initial;
+}
+
+.playground-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.playground-hero p {
+    font-size: 18px;
+    margin: 0;
+    color: #4b5563;
+}
+
+.playground-content {
+    display: block;
+    max-width: 1100px;
+    margin: 50px auto 80px;
+    padding: 0 24px;
+    height: auto;
+    align-items: initial;
+    justify-content: initial;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.project-card {
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: #1f2937;
+    width: calc((100% - 48px) / 3);
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 16px;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-thumb {
+    flex: 0 0 96px;
+    height: 96px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+}
+
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    width: 100%;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin: 0 0 12px 0;
+    color: #111827;
+    font-weight: 700;
+}
+
+.project-card p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.projects-empty {
+    margin-top: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+    .project-card {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .playground-hero {
+        padding: 60px 16px 40px;
+    }
+    .playground-hero h1 {
+        font-size: 36px;
+    }
+    .playground-content {
+        padding: 0 16px;
+        margin: 40px auto 60px;
+    }
+    .project-card {
+        width: 100%;
+    }
+    .project-thumb {
+        flex-basis: 80px;
+        height: 80px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - John Adenu-Mensah</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/playground.css">
+</head>
+<body>
+    <div name="navigation" class="nav-parent">
+        <div class="nav-left">
+            <img src="assets/images/logo.svg" alt="Logo" class="logo">
+        </div>
+        <div class="nav-right" role="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="cv.html">Playground</a>
+        </div>
+    </div>
+
+    <section class="playground-hero">
+        <h1>Playground</h1>
+        <p>Projects and experiments I've built</p>
+    </section>
+
+    <section class="playground-content">
+        <div id="projects-grid" class="projects-grid"></div>
+        <div id="projects-empty" class="projects-empty" hidden>No projects have been added yet.</div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('projects-grid');
+            const empty = document.getElementById('projects-empty');
+
+            try {
+                const resp = await fetch('playground/manifest.json');
+                if (!resp.ok) throw new Error('Manifest not found');
+                const projects = await resp.json();
+
+                if (!Array.isArray(projects) || projects.length === 0) {
+                    empty.hidden = false;
+                    return;
+                }
+
+                projects.forEach(project => {
+                    const card = document.createElement('a');
+                    card.className = 'project-card';
+                    card.href = project.link;
+                    card.target = '_blank';
+                    card.rel = 'noopener noreferrer';
+                    card.innerHTML = `
+                        <div class="project-thumb">
+                            <img src="${project.image || 'assets/images/project-placeholder.jpg'}" alt="${project.title} thumbnail">
+                        </div>
+                        <div class="project-content">
+                            <h3>${project.title}</h3>
+                            <p>${project.description}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (err) {
+                empty.hidden = false;
+            }
+        });
+        </script>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>John Adenu-Mensah</h3>
+                <p>Cybersecurity, Game Dev, Web Dev Enthusiast</p>
+                <p>Based in Ghana, West Africa</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="cv.html">Playground</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/john-adenu-mensah/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/Men5ah" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.instagram.com/racially_ambiguous_potato/" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 John Adenu-Mensah. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

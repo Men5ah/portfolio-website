@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "A modern, responsive portfolio website built with HTML, CSS Grid, and vanilla JavaScript.",
+    "link": "https://github.com/Men5ah/portfolio-website",
+    "image": "assets/images/project-placeholder.jpg"
+  },
+  {
+    "title": "2D Platformer Game",
+    "description": "A classic 2D platformer with custom physics and level design built in Unity.",
+    "link": "https://github.com/Men5ah",
+    "image": "assets/images/project-placeholder.jpg"
+  },
+  {
+    "title": "Password Security Analyzer",
+    "description": "A tool to analyze password strength and check against common breach databases.",
+    "link": "https://github.com/Men5ah",
+    "image": "assets/images/project-placeholder.jpg"
+  },
+  {
+    "title": "Web Scraper CLI",
+    "description": "Command-line tool for scraping web data and exporting to multiple formats.",
+    "link": "https://github.com/Men5ah",
+    "image": "assets/images/project-placeholder.jpg"
+  }
+]
